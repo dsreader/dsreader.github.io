@@ -1,8 +1,47 @@
 ---
-layout: default
-title: Home
+title: D.S.Reader
 ---
 
-<h1>D.S.Reader</h1>
+<h1>D.S.Reader for iOS</h1>
+<p><a href="https://apps.apple.com/jp/app/d-s-reader/id1592052131?l=en">Get from AppStore</a></p>
+<div>
+<p>E-Book Reader supporting EPUB, PDF, and CBZ formats, with custom fonts and custom dictionary support.</p>
+<p>When paired with calibre Content Server, you can easily browse your libraries, download books for reading.</p>
+<p>It will also track and sync you reading progress and highlights across all devices paired with the same server.</p>
+</div>
 
 <h1>D.S.Reader Helper</h1>
+<p><a href="https://github.com/dsreader/DSReaderHelper/releases/latest">Download Latest Release</a></p>
+<h2>Installation Notes</h2>
+    <p>After installing and restarting calibre, please open plugin option to let it finish setting its custom columns.</p>
+    <p>By default DSReader Helper will listen on port $(1 + calibre's port number). You can change it to another port number if needed, and please make sure it is open for access if you have firewall.</p>
+
+<h2>Functionalities</h2>
+<p>calibre has a good wealth of great plugins, and we want to make use of them to enrich DSReader's reading experiences. However, plugins' functionalities are not exposed by calibre context server APIs. Therefore we have made a helper plugin for this purpose.</p>
+<p>
+    Through this plugin DSReader will be able to:
+    <ul>
+        <li>Pull other plugins' custom columns settings. </li>
+        <li style="list-style-type:none">
+            <ul>
+              <li>Currently supports "Count Pages" and "Goodreads Sync"</li>
+            </ul>
+        </li>
+        <li>Tap into other plugins' functionalities. </li>
+        <li style="list-style-type:none">
+            <ul>
+              <li>Currently supports automatically updating reading progress and book shelf to Goodreads using "Goodreads Sync"</li>
+            </ul>
+        </li>
+        <li>Lookup definitions from user supplied dictionaries.</li>
+        <li>Manage reading positions across multiple devices more effectively and robust.</li>
+    </ul>
+    DSReader Helper has reused calibre Content Server's HTTP service components. Therefore this port has the same safety measures as calibre itself. Restrictions to User account should work as intended.
+</p>
+
+
+<h1>Support</h1>
+
+<p><a href="privacy.html">Privacy Policy</a></p>
+
+<p><a href="terms.html">Terms & Conditions</a></p>
